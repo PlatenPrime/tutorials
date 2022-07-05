@@ -1,0 +1,21 @@
+.sidebar {
+	background-color: rgb(79, 99, 255);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: aliceblue;
+	flex-direction: column;
+	margin: 0;
+}
+
+.sidebarLink {
+	color: aliceblue;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.sidebarLink:hover {
+	background-color: rgb(9, 17, 81);
+}

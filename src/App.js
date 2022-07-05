@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Outlet } from 'react-router';
 import './App.css';
+import SideBar from "./components/Sidebar/SideBar";
 
 function App() {
 	return (
 		<div className="App">
-			<Link to="mui"><h3>Go to MUI page</h3></Link>
+			<SideBar />
 			<Outlet />
 		</div>
 	);
