@@ -1,3 +1,4 @@
+import style from "../MUI.module.css";
 import { AppBar, Avatar, Box, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
@@ -5,6 +6,7 @@ import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 import Notifications from '@mui/icons-material/Notifications';
 import { Link } from "react-router-dom";
+
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -55,17 +57,21 @@ const MUINavBar = () => {
 	return (
 		<AppBar position='sticky'>
 			<StyledToolbar>
-				<Typography variant='h6'
+				<Typography variant='a'
 					sx={{
 						display: {
 							xs: "none",
 							sm: "block"
 						},
 						color: "#fff",
-						textDecoration: "none"
+						textDecoration: "none",
+						textTransform: 'uppercase',
+
 					}}
 				>
-					<Link to="/"  ><h3>Tutorials</h3></Link>
+
+
+					<Link className={style.linkRoute} to="/"  ><h3 id='homelink'>Tutorials</h3></Link>
 
 				</Typography>
 				<CastForEducationIcon sx={{
@@ -117,7 +123,7 @@ const MUINavBar = () => {
 				<MenuItem >My account</MenuItem>
 				<MenuItem >Logout</MenuItem>
 			</Menu>
-		</AppBar>
+		</AppBar >
 	);
 };
 

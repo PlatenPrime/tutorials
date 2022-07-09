@@ -1,0 +1,10 @@
+.linkRoute {
+	color: white;
+	text-decoration: none;
+}
+
+
+.linkRoute:visited {
+	color: white;
+	text-decoration: none;
+}
