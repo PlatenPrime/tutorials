@@ -1,7 +1,10 @@
-import { AppBar, Box, InputBase, styled, Toolbar, Typography } from '@mui/material';
-import React from 'react';
+import { AppBar, Avatar, Box, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from '@mui/material';
+import React, { useState } from 'react';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
-
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
+import Notifications from '@mui/icons-material/Notifications';
+import { Link } from "react-router-dom";
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -21,12 +24,34 @@ const Search = styled("div")(({ theme }) => ({
 
 
 const Icons = styled(Box)(({ theme }) => ({
-	backgroundColor: "white",
+	display: "none",
+	gap: "20px",
+	alignItems: "center",
+	[theme.breakpoints.up('sm')]: {
+		display: "flex"
+	},
+
+}));
+
+const UserBox = styled(Box)(({ theme }) => ({
+	display: "flex",
+	gap: "10px",
+	alignItems: "center",
+	[theme.breakpoints.up('sm')]: {
+		display: "none"
+	},
 
 }));
 
 
 const MUINavBar = () => {
+
+	const [open, setOpen] = useState(false);
+
+
+
+
+
 	return (
 		<AppBar position='sticky'>
 			<StyledToolbar>
@@ -35,10 +60,13 @@ const MUINavBar = () => {
 						display: {
 							xs: "none",
 							sm: "block"
-						}
+						},
+						color: "#fff",
+						textDecoration: "none"
 					}}
 				>
-					Platen
+					<Link to="/"  ><h3>Tutorials</h3></Link>
+
 				</Typography>
 				<CastForEducationIcon sx={{
 					display: {
@@ -50,9 +78,45 @@ const MUINavBar = () => {
 					<InputBase placeholder='Search...' />
 				</Search>
 				<Icons>
-					Icons
+					<Badge badgeContent={12} color="secondary">
+						<MailIcon />
+					</Badge>
+					<Badge badgeContent={12} color="secondary">
+						<Notifications />
+					</Badge>
+					<Avatar sx={{ width: 30, height: 30, }} src="https://i.imgur.com/4ph9Ph2.jpg"
+						onClick={e => setOpen(true)}
+					/>
 				</Icons>
+				<UserBox onClick={e => setOpen(true)}>
+					<Avatar sx={{ width: 30, height: 30, }} src="https://i.imgur.com/4ph9Ph2.jpg"
+
+
+					/>
+					<Typography variant='span'>
+						Platen
+					</Typography>
+				</UserBox >
 			</StyledToolbar>
+			<Menu
+				id="demo-positioned-menu"
+				aria-labelledby="demo-positioned-button"
+
+				open={open}
+				onClose={e => setOpen(false)}
+				anchorOrigin={{
+					vertical: 'top',
+					horizontal: 'right',
+				}}
+				transformOrigin={{
+					vertical: 'top',
+					horizontal: 'right',
+				}}
+			>
+				<MenuItem >Profile</MenuItem>
+				<MenuItem >My account</MenuItem>
+				<MenuItem >Logout</MenuItem>
+			</Menu>
 		</AppBar>
 	);
 };

@@ -17,9 +17,14 @@ root.render(
 				<Route path="/" element={<App />}>
 
 					<Route index element={<h1>Index element of App</h1>} />
-					<Route path="mui" element={<MUI />} />
+
 
 				</Route>
+				<Route>
+					<Route path="mui" element={<MUI />} />
+				</Route>
+
+
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

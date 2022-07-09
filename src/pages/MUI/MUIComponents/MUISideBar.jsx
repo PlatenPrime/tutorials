@@ -1,10 +1,22 @@
-import { Box } from '@mui/material';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import React from 'react';
+
+
 
 const MUISideBar = () => {
 	return (
 		<Box bgcolor="yellow" flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }} >
-			SideBar
+
+			<List>
+				<ListItem disablePadding>
+					<ListItemButton component="a" href="/mui">
+						<ListItemIcon>
+
+						</ListItemIcon>
+						<ListItemText primary="Homepage" />
+					</ListItemButton>
+				</ListItem>
+			</List>
 		</Box>
 	);
 };
