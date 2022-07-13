@@ -1,12 +1,135 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup'
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+
+
+function srcset(image, size, rows = 1, cols = 1) {
+	return {
+		src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+		srcSet: `${image}?w=${size * cols}&h=${size * rows
+			}&fit=crop&auto=format&dpr=2 2x`,
+	};
+}
+
+
+
+
+
+
 
 const MUIRightBar = () => {
 	return (
-		<Box bgcolor="fuchsia" flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-			RightBar
+		<Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+			<Box position="fixed" width={300} >
+
+				<Typography variant='h6' fontWeight={100} mb={2} mt={2} >
+					Online friends
+				</Typography>
+				<AvatarGroup max={4}>
+					<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+					<Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+					<Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+					<Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+					<Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+				</AvatarGroup>
+
+				<Typography variant='h6' fontWeight={100} mb={2} mt={2}>
+					Latest photos
+				</Typography>
+
+				<ImageList
+					sx={{ width: 500, height: 900, gap: 5 }}
+					variant="quilted"
+					cols={2}
+					rowHeight={100}
+				>
+					{itemData.map((item) => (
+						<ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+							<img
+								{...srcset(item.img, 121, item.rows, item.cols)}
+								alt={item.title}
+								loading="lazy"
+							/>
+						</ImageListItem>
+					))}
+				</ImageList>
+
+				<Typography variant='h6' fontWeight={100} mb={2} mt={2}>
+					Latest Conversations
+				</Typography>
+
+			</Box>
 		</Box>
 	);
 };
+
+
+
+
+
+const itemData = [
+	{
+		img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+		title: 'Breakfast',
+		rows: 2,
+		cols: 2,
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+		title: 'Burger',
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+		title: 'Camera',
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+		title: 'Coffee',
+		cols: 2,
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+		title: 'Hats',
+		cols: 2,
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+		title: 'Honey',
+		author: '@arwinneil',
+		rows: 2,
+		cols: 2,
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+		title: 'Basketball',
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+		title: 'Fern',
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+		title: 'Mushrooms',
+		rows: 2,
+		cols: 2,
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+		title: 'Tomato basil',
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+		title: 'Sea star',
+	},
+	{
+		img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+		title: 'Bike',
+		cols: 2,
+	},
+];
+
 
 export default MUIRightBar;

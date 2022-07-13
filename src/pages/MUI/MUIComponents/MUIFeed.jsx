@@ -1,10 +1,16 @@
-import { Box } from '@mui/material';
+
+import { Box } from '@mui/system';
 import React from 'react';
+import MUIPost from './MUIPost';
 
 const MUIFeed = () => {
 	return (
-		<Box bgcolor="skyblue" flex={4} p={2}>
-			Feed
+		<Box flex={4} p={2}>
+			<MUIPost />
+			<MUIPost />
+			<MUIPost />
+			<MUIPost />
+
 		</Box>
 	);
 };
