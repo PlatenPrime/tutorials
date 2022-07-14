@@ -5,6 +5,7 @@ import MUISideBar from './MUIComponents/MUISideBar';
 import MUIFeed from './MUIComponents/MUIFeed';
 import MUIRightBar from './MUIComponents/MUIRightBar';
 import MUINavBar from './MUIComponents/MUINavBar';
+import MUIAdd from './MUIComponents/MUIAdd';
 
 
 const MUI = () => {
@@ -22,7 +23,7 @@ const MUI = () => {
 					<MUIRightBar />
 
 				</Stack>
-
+				<MUIAdd />
 
 
 			</Box>

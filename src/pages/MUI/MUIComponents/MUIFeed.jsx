@@ -7,9 +7,7 @@ const MUIFeed = () => {
 	return (
 		<Box flex={4} p={2}>
 			<MUIPost />
-			<MUIPost />
-			<MUIPost />
-			<MUIPost />
+
 
 		</Box>
 	);
