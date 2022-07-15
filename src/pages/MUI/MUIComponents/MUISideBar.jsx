@@ -12,7 +12,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNight';
 
 
 
-const MUISideBar = () => {
+const MUISideBar = ({ setMode, mode }) => {
 
 	const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -84,7 +84,7 @@ const MUISideBar = () => {
 							<ListItemIcon>
 								<ModeNightIcon />
 							</ListItemIcon>
-							<Switch {...label} color="primary" />
+							<Switch {...label} color="primary" onChange={e => setMode(mode === "light" ? "dark" : "light")} />
 						</ListItemButton>
 					</ListItem>
 

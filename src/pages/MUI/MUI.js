@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Stack, ThemeProvider, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, createTheme, Stack, ThemeProvider, Typography } from '@mui/material';
 import { theme } from '../../theme';
 import MUISideBar from './MUIComponents/MUISideBar';
 import MUIFeed from './MUIComponents/MUIFeed';
@@ -11,14 +11,33 @@ import MUIAdd from './MUIComponents/MUIAdd';
 const MUI = () => {
 
 
+	const [mode, setMode] = useState("light")
+
+	const darkTheme = createTheme(
+		{
+			palette: {
+				mode: mode,
+			}
+
+
+
+
+
+		}
+	)
+
+
+
+
+
 
 
 	return (
-		<ThemeProvider theme={theme}>
-			<Box>
+		<ThemeProvider theme={darkTheme}>
+			<Box bgcolor={"background.default"} color={"text.primary"} >
 				<MUINavBar />
 				<Stack direction="row" spacing={2} justifyContent="space-between">
-					<MUISideBar />
+					<MUISideBar setMode={setMode} mode={mode} />
 					<MUIFeed />
 					<MUIRightBar />
 

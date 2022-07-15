@@ -1,7 +1,11 @@
-import { Avatar, Box, Fab, Modal, styled, TextField, Tooltip, Typography } from '@mui/material';
-import { Add as AddIcon } from '@mui/icons-material';
+import { Avatar, Box, Button, ButtonGroup, Fab, Modal, Stack, styled, TextField, Tooltip, Typography } from '@mui/material';
+import { Add as AddIcon, DateRange, DateRangeOutlined } from '@mui/icons-material';
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import React from 'react';
 import { useState } from 'react';
+import EmojiEmotions from '@mui/icons-material/EmojiEmotions';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 
 
@@ -46,11 +50,11 @@ const MUIAdd = () => {
 
 			<StyledModal
 				open={open}
-				onClose={e => setOpen(true)}
+				onClose={e => setOpen(false)}
 				aria-labelledby="modal-modal-title"
 				aria-describedby="modal-modal-description"
 			>
-				<Box width={400} height={280} bgcolor="white" p={3} borderRadius={5} >
+				<Box width={600} height={380} bgcolor="white" p={3} borderRadius={5} bgcolor={"background.default"} color={"text.primary"}  >
 					<Typography variant='h6' color="gray" textAlign="center" >
 						Create post
 					</Typography>
@@ -71,10 +75,23 @@ const MUIAdd = () => {
 						sx={{ width: "100%" }}
 						id="standard-multiline-static"
 						multiline
-						rows={4}
+						rows={3}
 						placeholder="Some text"
 						variant="standard"
 					/>
+					<Stack direction="row" gap={1} mt={2} mb={3}>
+						<EmojiEmotions color='primary' />
+						<AddPhotoAlternateIcon color='secondary' />
+						<VideoCameraBackIcon color='success' />
+						<PersonAddAlt1Icon color='error' />
+					</Stack>
+					<ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth>
+						<Button >Post</Button>
+						<Button sx={{ width: "100px" }} >
+							<DateRangeOutlined />
+						</Button>
+
+					</ButtonGroup>
 				</Box>
 			</StyledModal>
 
