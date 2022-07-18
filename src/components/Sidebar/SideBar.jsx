@@ -8,6 +8,7 @@ const SideBar = () => {
 		<div className={style.sidebar}>
 			<Link to="/" className={style.sidebarLink} ><h3>Home</h3></Link>
 			<Link to="mui" className={style.sidebarLink} ><h3>MUI</h3></Link>
+			<Link to="router" className={style.sidebarLink} ><h3>React Router</h3></Link>
 		</div>
 	);
 };

@@ -8,22 +8,29 @@ import {
 import './index.css';
 import App from './App';
 import MUI from './pages/MUI/MUI';
+import tutorialsLinks from './links';
+import Router from './pages/Router/Router';
+
+
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Routes>
+
 				<Route path="/" element={<App />}>
-
-					<Route index element={<h1>Index element of App</h1>} />
-
-
-				</Route>
-				<Route>
-					<Route path="mui" element={<MUI />} />
 				</Route>
 
+				<Route path="mui" element={<MUI />} >
+				</Route>
+
+				<Route path="router" element={<Router />} >
+				</Route>
 
 			</Routes>
 		</BrowserRouter>

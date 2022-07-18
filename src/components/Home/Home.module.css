@@ -1,0 +1,12 @@
+
+
+.home {
+	color: rgb(0, 59, 160);
+	text-decoration: none;
+}
+
+
+.home:visited {
+	color: rgb(0, 211, 11);
+	text-decoration: none;
+}

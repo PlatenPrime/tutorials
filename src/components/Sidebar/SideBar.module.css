@@ -6,6 +6,8 @@
 	color: aliceblue;
 	flex-direction: column;
 	margin: 0;
+	min-width: 30vw;
+	border-radius: 20px;
 }
 
 .sidebarLink {
@@ -17,5 +19,8 @@
 }
 
 .sidebarLink:hover {
-	background-color: rgb(9, 17, 81);
+	background-color: rgb(150, 162, 255);
+	border-radius: 20px;
+	color: darkblue;
+	transition: 0.3s;
 }

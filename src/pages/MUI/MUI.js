@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, createTheme, Stack, ThemeProvider, Typography } from '@mui/material';
-import { theme } from '../../theme';
+import { theme } from './theme';
 import MUISideBar from './MUIComponents/MUISideBar';
 import MUIFeed from './MUIComponents/MUIFeed';
 import MUIRightBar from './MUIComponents/MUIRightBar';
