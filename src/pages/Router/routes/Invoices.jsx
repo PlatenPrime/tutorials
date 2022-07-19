@@ -2,9 +2,9 @@ import React from 'react';
 
 const Invoices = () => {
 	return (
-		<main style={{ padding: "1rem 0" }}>
+		<div style={{ padding: "1rem 0" }}>
 			<h2>Invoices</h2>
-		</main>
+		</div>
 	);
 };
 

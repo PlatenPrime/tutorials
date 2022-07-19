@@ -10,7 +10,6 @@ import App from './App';
 import MUI from './pages/MUI/MUI';
 import tutorialsLinks from './links';
 import Router from './pages/Router/Router';
-import RouterApp from './pages/Router/RouterApp';
 import Expenses from './pages/Router/routes/Expenses';
 import Invoices from './pages/Router/routes/Invoices';
 
@@ -33,14 +32,17 @@ root.render(
 				</Route>
 
 				<Route path="router" element={<Router />} >
-
-					<Route index element={<RouterApp />} />
+					<Route
+						index
+						element={
+							<main style={{ padding: "1rem" }}>
+								<p>Make your choose!</p>
+							</main>
+						}
+					/>
 
 					<Route path="expenses" element={<Expenses />} />
 					<Route path="invoices" element={<Invoices />} />
-
-
-
 
 				</Route>
 
