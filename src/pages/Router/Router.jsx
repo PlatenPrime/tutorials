@@ -1,14 +1,25 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Home from '../../components/Home/Home';
-import style from "./Router.module.css";
+import Expenses from "./routes/Expenses";
+import Invoices from "./routes/Invoices";
+
+
+import RouterApp from './RouterApp';
 
 const Router = () => {
 	return (
-		<div className={style.router}>
-			<h1>This is React Router</h1>
+
+		<div>
 			<Home />
+			<RouterApp />
+
 		</div>
+
+
+
+
 	);
 };
 
-export default Router; <h1>This is React Router</h1>
+export default Router; 
