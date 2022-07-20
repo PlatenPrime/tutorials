@@ -12,6 +12,7 @@ import tutorialsLinks from './links';
 import Router from './pages/Router/Router';
 import Expenses from './pages/Router/routes/Expenses';
 import Invoices from './pages/Router/routes/Invoices';
+import Invoice from './pages/Router/routes/Invoice';
 
 
 
@@ -42,7 +43,36 @@ root.render(
 					/>
 
 					<Route path="expenses" element={<Expenses />} />
-					<Route path="invoices" element={<Invoices />} />
+
+
+					<Route path="invoices" element={<Invoices />}>
+						<Route
+							index
+							element={
+								<main style={{ padding: "1rem" }}>
+									<p>Select an invoice</p>
+								</main>
+							}
+						/>
+
+
+
+
+						<Route path=":invoiceId" element={<Invoice />} />
+					</Route>
+
+
+
+
+
+					<Route
+						path="*"
+						element={
+							<main style={{ padding: "1rem" }}>
+								<p>There's nothing here!</p>
+							</main>
+						}
+					/>
 
 				</Route>
 
