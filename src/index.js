@@ -13,6 +13,7 @@ import Router from './pages/Router/Router';
 import Expenses from './pages/Router/routes/Expenses';
 import Invoices from './pages/Router/routes/Invoices';
 import Invoice from './pages/Router/routes/Invoice';
+import StateManagement from './pages/StateManagement/StateManagement';
 
 
 
@@ -33,6 +34,7 @@ root.render(
 				</Route>
 
 				<Route path="router" element={<Router />} >
+
 					<Route
 						index
 						element={
@@ -55,14 +57,8 @@ root.render(
 							}
 						/>
 
-
-
-
 						<Route path=":invoiceId" element={<Invoice />} />
 					</Route>
-
-
-
 
 
 					<Route
@@ -74,6 +70,10 @@ root.render(
 						}
 					/>
 
+				</Route>
+
+
+				<Route path="sm" element={<StateManagement />} >
 				</Route>
 
 			</Routes>

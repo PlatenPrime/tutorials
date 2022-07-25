@@ -5,13 +5,51 @@ import Expenses from "./routes/Expenses";
 import Invoices from "./routes/Invoices";
 import { Link, Outlet } from 'react-router-dom';
 import style from "./Router.module.css";
+import Invoice from './routes/Invoice';
 
 
 
 const Router = () => {
+
+
+
+
+
+
+
+
+
 	return (
 
 		<div>
+
+			<Routes>
+			
+
+			</Routes>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<Home />
 
 
