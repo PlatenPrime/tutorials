@@ -8,15 +8,9 @@ import {
 import './index.css';
 import App from './App';
 import MUI from './pages/MUI/MUI';
-import tutorialsLinks from './links';
 import Router from './pages/Router/Router';
-import Expenses from './pages/Router/routes/Expenses';
-import Invoices from './pages/Router/routes/Invoices';
-import Invoice from './pages/Router/routes/Invoice';
 import StateManagement from './pages/StateManagement/StateManagement';
-
-
-
+import Redux from './pages/Redux/Redux';
 
 
 
@@ -27,54 +21,18 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 
-				<Route path="/" element={<App />}>
-				</Route>
-
-				<Route path="mui" element={<MUI />} >
-				</Route>
-
-				<Route path="router" element={<Router />} >
-
-					<Route
-						index
-						element={
-							<main style={{ padding: "1rem" }}>
-								<p>Make your choose!</p>
-							</main>
-						}
-					/>
-
-					<Route path="expenses" element={<Expenses />} />
+				<Route path="/" element={<App />} />
 
 
-					<Route path="invoices" element={<Invoices />}>
-						<Route
-							index
-							element={
-								<main style={{ padding: "1rem" }}>
-									<p>Select an invoice</p>
-								</main>
-							}
-						/>
-
-						<Route path=":invoiceId" element={<Invoice />} />
-					</Route>
+				<Route path="mui" element={<MUI />} />
 
 
-					<Route
-						path="*"
-						element={
-							<main style={{ padding: "1rem" }}>
-								<p>There's nothing here!</p>
-							</main>
-						}
-					/>
-
-				</Route>
+				<Route path="router" element={<Router />} />
 
 
-				<Route path="sm" element={<StateManagement />} >
-				</Route>
+				<Route path="sm" element={<StateManagement />} />
+				<Route path="redux" element={<Redux />} />
+
 
 			</Routes>
 		</BrowserRouter>
