@@ -3,10 +3,10 @@ import React from 'react';
 import { useDispatch } from "react-redux";
 import { login, logout } from "./../reduxFeatures/user";
 
+
 const Login = () => {
 
-	const dispatch = useDispatch()
-
+	const dispatch = useDispatch();
 
 	return (
 		<div>
@@ -15,7 +15,6 @@ const Login = () => {
 			>
 				Login
 			</button>
-
 			<button
 				onClick={() => { dispatch(logout()) }}
 			>
