@@ -14,6 +14,7 @@ import Redux from './pages/Redux/Redux';
 import Expenses from './pages/Router/routes/Expenses';
 import Invoices from './pages/Router/routes/Invoices';
 import Invoice from './pages/Router/routes/Invoice';
+import PedroMern from './pages/PedroMern/client/PedroMern';
 
 
 
@@ -74,6 +75,7 @@ root.render(
 
 					<Route path="sm" element={<StateManagement />} />
 					<Route path="redux" element={<Redux />} />
+					<Route path="pedromern" element={<PedroMern />} />
 
 				</Route>
 
