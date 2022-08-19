@@ -19,7 +19,7 @@ const PedroMern = () => {
 
 
 	useEffect(() => {
-		axios.get("https://platentutorials.vercel.app/pedromern/getUsers").then((response) => {
+		axios.get("http://localhost:3001/getUsers").then((response) => {
 			setListOfUsers(response.data);
 		});
 	}, []);
@@ -27,7 +27,7 @@ const PedroMern = () => {
 
 
 	const createUser = () => {
-		axios.post("https://platentutorials.vercel.app/pedromern/createUser", {
+		axios.post("http://localhost:3001/createUser", {
 			name,
 			age,
 			username,
