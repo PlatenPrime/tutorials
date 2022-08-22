@@ -13,6 +13,7 @@ const SideBar = () => {
 			<Link to="redux" className={style.sidebarLink} ><h3>Redux</h3></Link>
 			<Link to="pedromern" className={style.sidebarLink} ><h3>Pedro Mern</h3></Link>
 			<Link to="drawio" className={style.sidebarLink} ><h3>Drawio</h3></Link>
+			<Link to="hooks" className={style.sidebarLink} ><h3>Hooks</h3></Link>
 		</div>
 	);
 };

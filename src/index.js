@@ -16,6 +16,7 @@ import Invoices from './pages/Router/routes/Invoices';
 import Invoice from './pages/Router/routes/Invoice';
 import PedroMern from './pages/PedroMern/client/PedroMern';
 import Drawio from './pages/Drawio/Drawio';
+import Hooks from './pages/Hooks/Hooks';
 
 
 
@@ -78,6 +79,7 @@ root.render(
 					<Route path="redux" element={<Redux />} />
 					<Route path="pedromern" element={<PedroMern />} />
 					<Route path="drawio" element={<Drawio />} />
+					<Route path="hooks" element={<Hooks />} />
 
 				</Route>
 
